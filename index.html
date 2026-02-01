@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- No preview on Instagram / WhatsApp -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta name="twitter:card" content="none">
+
+  <title>💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg,#ffd1dc,#ffe6f0);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    .yes {
+      background: #ff69b4;
+      color: white;
+    }
+    .no {
+      position: absolute;
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>Mufsila 💕<br>Will you be my Valentine?</h2>
+    <button class="yes" onclick="yes()">Yes 💖</button>
+    <button class="no" id="no">No 😜</button>
+  </div>
+
+<script>
+  const no = document.getElementById("no");
+  no.addEventListener("mouseover", move);
+  no.addEventListener("touchstart", move);
+
+  function move(){
+    no.style.left = Math.random()*80 + "vw";
+    no.style.top = Math.random()*80 + "vh";
+  }
+
+  function yes(){
+    alert("Yayyy 💖 I knew it 😘");
+  }
+</script>
+</body>
+</html>
